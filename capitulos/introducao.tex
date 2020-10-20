@@ -1,1 +1,59 @@
 \mychapter{Introdução}{cap:introducao} \lhead{INTRODUÇÃO}
+\section{Justificativa}
+
+O controle de movimentação de robôs é uma competência chave para os fabricantes, e o desenvolvimento atual está focado em aumentar o desempenho do robô, reduzindo custos, melhorando a segurança e introduzindo novas funcionalidades conforme descrito
+em \cite{brogaardh2007present}, há necessidade de melhorar continuamente os modelos e métodos 
+de controle a fim de cumprir todos os requisitos conflitantes, por exemplo,
+maior desempenho para um robô de peso menor e, portanto, menor rigidez mecânica.
+
+O motivo para este tipo de desenvolvimento é, naturalmente, a redução de custos, mas também existem outros benefícios menores como menor consumo de energia, aprimoramento da destreza, melhorias em segurança
+e menor impacto ambiental. A necessidade de redução de custos pode resultar no uso
+de componentes mais otimizados, de menor valor, que geralmente têm maior variação em seus resultados,
+por exemplo, variação da rigidez da caixa de engrenagens ou nos parâmetros que descrevem o
+braço mecânico. A redução de custos às vezes também resulta em um nível mais alto de perturbações e
+não linearidades em alguns dos componentes, por exemplo, nos atuadores ou nos sensores.
+
+Um robô industrial é uma máquina de uso geral para automação industrial, e apesar de que os requisitos de uma determinada aplicação possam ser formulados com precisão, não há limites para o que os usuários do robô desejam com relação ao desempenho e à funcionalidade desejáveis do controle de movimento de um robô. O controle de movimentação depende da aplicação. Quanto melhor o desempenho,
+mais aplicações estarão sujeitas à serem automatizadas por um modelo de robô específico.
+Alguns exemplos de requisitos são:
+
+\begin{itemize}
+   \item Alta precisão no seguimento de caminho em aplicações contínuas (por exemplo, soldagem a laser, corte a laser, corte com jato de água).
+   \item Precisão de alta velocidade em aplicações contínuas (por exemplo, pintura ou dispensação).
+   \item Baixo tempo de ciclo (alta velocidade e aceleração) em aplicações discretas (por exemplo,manuseio de materiais).
+   \item Pequenos overshoots e um curto tempo de acomodação em aplicações de processo discretas
+(por exemplo, soldagem por pontos).
+   \item Alto controle de rigidez em aplicações de contato (por exemplo, usinagem).
+ \end{itemize}
+
+Para manipuladores industriais com peso e custo otimizados, os requisitos acima só podem ser manipulado por inteligência computacional aumentada, ou seja, controle de movimento aprimorado. O controle de movimento de robôs manipuladores industriais é um desafio
+tarefa, que tem sido estudada por pesquisadores acadêmicos e industriais. Alguns resultados da pesquisa acadêmica foram implementados com sucesso em aplicações industriais reais, enquanto outros resultados estão longe
+de ser relevante para a realidade industrial. Até certo ponto, o desenvolvimento de algoritmos de controle de movimento seguiram duas rotas distintas, uma por pesquisadores acadêmicos e outra por fabricantes de robôs.
+
+
+A situação pode ser parcialmente explicada pelo fato de que os algoritmos de movimento usados na indústria às vezes são considerados segredos comerciais. Devido a difícil situação competitiva entre os fabricantes de robôs, os algoritmos são
+raramente publicado. Outra explicação é que os pesquisadores de controle de robôs acadêmicos muitas vezes aplicam matemática avançada em alguns aspectos selecionados de sistemas relativamente pequenos, enquanto os pesquisadores e desenvolvedores de robôs industriais lidam com todos os aspectos significativos de um sistema complexo onde a proposta matemática avançada frequentemente não pode ser aplicada. Além disso, os problemas que
+a indústria de robôs às vezes presente pode incluir muitos aspectos de engenharia para ser atraente para a comunidade acadêmica. Pesquisa de robôs industriais e
+o desenvolvimento deve equilibrar atividades de curto prazo e atividades de longo prazo. Colaborações de pesquisa a longo prazo entre a indústria e a academia devem ser possíveis, desde que a situação de propriedade intelectual seja tratata. 
+
+Essa tese foca no processo de modelagem e design de um controlador de movimento para um manipulador robôtico que atenda a requisitos impostos pela trajetória sugerida.  O Manipulador Industrial UR5, fabricado pela \emph{Universal Robots},
+é utilizado como estudo de caso nessa tese. Uma característica importante desse manipulador é o fato da arquitetura de controle ser fechada, isto é,  só é fornecido acesso ao usuário através de programas de alto nível como o design de trajetórias, sendo impossível criar aplicações utilizando informações de baixo nível. Arquiteturas de controle fechadas são um problema comum ao analisar manipuladores industriais disponíveis comercialmente. 
+
+\section{Objetivos}
+\subsection{Objetivos Gerais}
+
+\subsection{Objetivos Específicos}
+ \begin{itemize}
+   \item Construir modelo dinâmico e cinemático para tornar possível co m que pesquisadores e desenvolvedores possam criar suas próprias funcionalidades com robô UR5 sem estar atreladas as limitações do Software do fabricante; 
+   \item Construir um trajeto para a tarefa escolhida;
+   \item Construir uma análise de erro de posição;
+    \item Produzir simulação do trajeto escolhido.   
+    \linebreak[5]
+ \end{itemize}
+ 
+ 
+\section{Resultados esperados}  
+
+Espera-se com esse trabalho reduzir a distância entre trabalhos produzidos acadêmicamente e sua contra-parte no meio industrial. Será construído um modelo matemático do manipulador Robótico UR5. Nesse modelo serão considerados todos os processos envolvendo desde a formação da rota do robô, até o desenvolvimento final do controlador para executar uma tarefa de exemplo em respeito a critérios de desempenho pré-estabelecidos. 
+É esperado que essa iniciativa de redução da distância entre indústria e academia possibilite a implementação de tarefas cada vez mais complexas com a tecnologia já disponível no mercado, através da disponibilização de modelos matemáticos que podem ser utilizados para teoricamente qualquer tarefa aplicando um método de controle adequado. 
+

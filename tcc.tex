@@ -31,12 +31,19 @@ pdfview = {XYZ null null null}
 \usepackage[utf8]{inputenc}
 \inputencoding{latin1}
 \inputencoding{utf8}
-\usepackage{amsmath}
 \usepackage{amstext}
 \usepackage{subfigure}
 \usepackage[colorinlistoftodos,prependcaption]{todonotes}
+
+
+\usepackage{chngcntr}
 \counterwithout{table}{chapter}
-%\usepackage{algorithmic}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
 
 \titulo{Modelagem Dinâmica e Estática do Braço Robótico UR5}
 
@@ -97,7 +104,7 @@ abstract
 \makefigurespage
 
 % Tabelas
-%\maketablespage
+\maketablespage
 \listoftables
 
 % Algoritmos
@@ -113,18 +120,19 @@ abstract
 
 \inicio
 
-\include{capitulos/temporario}
+
 
 \include{capitulos/introducao}
 TODO
-\include{capitulos/leilao-redes-moveis}
+\include{capitulos/fundamentacao}
 TODO2
-\include{capitulos/modelo-implementacao}
+\include{capitulos/materiais}
 TODO
 \include{capitulos/resultados}
-Neste capítulo lorem ipsun dolor sit amet
+TODO
 \include{capitulos/conclusoes}
-
+TODO
+\include{capitulos/temporario}
 % 
 \begin{raggedright}
 \bibliographystyle{plainnat}

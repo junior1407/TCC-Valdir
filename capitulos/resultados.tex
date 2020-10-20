@@ -3,7 +3,6 @@
 
 \section{Tabela de Denavit-Hartenberg}
 
-
 \begin{table}[ht]
 \centering
 \begin{tabular}[t]{lcccc}
@@ -21,4 +20,143 @@ Junta 6& $q_6$& 0.0823 &0&0\\
 \caption{Tabela de Denavit-Hartenberg}
 \end{table}%
 
-\section{Justificativa}
+\section{Algoritmos}
+
+\begin{algorithm}[H]
+\caption{Calculate $y = x^n$}
+\begin{algorithmic}
+\REQUIRE $n \geq 0 \vee x \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \leftarrow 1$
+\IF{$n < 0$}
+\STATE $X \leftarrow 1 / x$
+\STATE $N \leftarrow -n$
+\ELSE
+\STATE $X \leftarrow x$
+\STATE $N \leftarrow n$
+\ENDIF
+\WHILE{$N \neq 0$}
+\IF{$N$ is even}
+\STATE $X \leftarrow X \times X$
+\STATE $N \leftarrow N / 2$
+\ELSE[$N$ is odd]
+\STATE $y \leftarrow y \times X$
+\STATE $N \leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+
+\section{Tensores de Inércia do Modelo 3D}
+
+\begin{equation}
+I_{1} = 
+\begin{bmatrix}
+0.0067 & 0 & 0\\
+0 & 0.0064 & 0\\
+0 & 0 & 0.0067
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{2} = 
+\begin{bmatrix}
+0.0149 & 0 & 0\\
+0 & 0.3564 & 0\\
+0 & 0 & 0.3553
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{3} = 
+\begin{bmatrix}
+0.0025 & 0 & 0.0034\\
+0 & 0.0551 & 0\\
+0.0034 & 0 & 0.0546
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{4} = 
+\begin{bmatrix}
+0.0012 & 0 & 0\\
+0 & 0.0012 & 0\\
+0 & 0 & 0.0009
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{5} = 
+\begin{bmatrix}
+0.0012 & 0 & 0\\
+0 & 0.0012 & 0\\
+0 & 0 & 0.0009
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{6} = 
+\begin{bmatrix}
+0.0001 & 0 & 0\\
+0 & 0.0001 & 0\\
+0 & 0 & 0.0001
+\end{bmatrix}
+\end{equation}
+
+\section{Tensores de Inércia da Aproximação Cilíndrica}
+
+\begin{equation}
+I_{1} = 
+\begin{bmatrix}
+0.0084 & 0 & 0\\
+0 & 0.0064 & 0\\
+0 & 0 & 0.0084
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{2} = 
+\begin{bmatrix}
+0.0078 & 0 & 0\\
+0 & 0.0021 & 0\\
+0 & 0 & 0.0021
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{3} = 
+\begin{bmatrix}
+0.0016 & 0 & 0\\
+0 & 0.0462 & 0\\
+0 & 0 & 0.0462
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{4} = 
+\begin{bmatrix}
+0.0016 & 0 & 0\\
+0 & 0.0016 & 0\\
+0 & 0 & 0.0009
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{5} = 
+\begin{bmatrix}
+0.0016 & 0 & 0\\
+0 & 0.0016 & 0\\
+0 & 0 & 0.0009
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{6} = 
+\begin{bmatrix}
+0.0001 & 0 & 0\\
+0 & 0.0001 & 0\\
+0 & 0 & 0.0001
+\end{bmatrix}
+\end{equation}
+
+
