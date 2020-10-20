@@ -1,0 +1,153 @@
+\documentclass[tcc]{ic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+colorlinks = {true},
+linktocpage = {false},
+plainpages = {false},
+linkcolor = {Blue},
+citecolor = {Blue},
+urlcolor = {Red},
+unicode = {true},
+pdftitle = {titulo}, 
+pdfauthor = {autor},
+pdfsubject = {Trabalho de Conclusão de Curso},
+pdfkeywords={palavras-chave},
+pdfcreator = {LaTeX2e},
+pdffitwindow = {false},
+pdfstartview = {FitH},
+pdftoolbar = {true},
+pdfpagemode = {UseOutlines},
+pdfview = {XYZ null null null}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{ {./images/} }
+\usepackage{lettrine}
+\usepackage{smartdiagram}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{dsfont}
+\usepackage{comment}
+\usepackage[utf8]{inputenc}
+\inputencoding{latin1}
+\inputencoding{utf8}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{subfigure}
+\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+\counterwithout{table}{chapter}
+%\usepackage{algorithmic}
+
+\titulo{Modelagem Dinâmica e Estática do Braço Robótico UR5}
+
+\autor{Valdir de Souza Junior}{vsj@ic.ufal.br}{}
+
+\orientador{Prof. Dr. Erick de Andrade Barboza}{Instituto de Computação}{Universidade Federal de Alagoas}
+
+\examinador{avaliador}{}{Instituto de Computação}{Universidade Federal de Alagoas}
+
+\examinadorTres{avaliador2}{}{Instituto de Computação}{Universidade Federal de Alagoas}
+
+\dataMesAno{Dezembro}{2020}
+
+\begin{document}
+
+\selectlanguage{portuguese}
+
+\capa
+
+\begin{agradecimentos}
+
+
+
+
+\vspace{2em}
+\begin{flushright}
+autor
+\end{flushright}
+
+
+\vspace{30em}
+\begin{epigraph}{segundo nome, \textit{primeiro nome}}
+``frase''
+\end{epigraph}
+
+
+
+\end{agradecimentos}
+
+\begin{resumo}
+
+resumo
+
+\vspace{1em}
+\textbf{Palavras-chave}: 
+\end{resumo}
+
+\begin{abstract}
+abstract
+
+\end{abstract}
+\vspace{1em}
+\textbf{Key-words}:  A, B, C
+
+%\end{abstract}
+
+% Figuras
+\makefigurespage
+
+% Tabelas
+%\maketablespage
+\listoftables
+
+% Algoritmos
+\listofalgorithms
+
+% Abreviaturas (devem estar em ordem alfabética)
+\makeabrevpage{\input{elementos-pretextuais/abreviaturas}}
+
+% Símbolos (devem estar em ordem alfabética)
+\makesymbolspage{\input{elementos-pretextuais/simbolos}}
+
+\tableofcontents
+
+\inicio
+
+\include{capitulos/temporario}
+
+\include{capitulos/introducao}
+TODO
+\include{capitulos/leilao-redes-moveis}
+TODO2
+\include{capitulos/modelo-implementacao}
+TODO
+\include{capitulos/resultados}
+Neste capítulo lorem ipsun dolor sit amet
+\include{capitulos/conclusoes}
+
+% 
+\begin{raggedright}
+\bibliographystyle{plainnat}
+\renewcommand{\bibsection}{
+\chapter*{\begin{flushright}Referências bibliográficas\end{flushright}}
+\addcontentsline{toc}{chapter}{Referências bibliográficas}
+}
+\lhead{REFERÊNCIAS BIBLIOGRÁFICAS}
+\bibliography{referencias}
+\newpage\lhead{\rightmark}
+\end{raggedright}
+
+% \chapter*{}
+% \vfill
+% \singlespacing
+% \thispagestyle{empty}
+% \begin{center}
+% Este trabalho foi redigido em {\large\LaTeX}\ utilizando uma modifição do estilo \textsf{IC-UFAL}.
+% As referências bibliográficas foram preparadas no \textsf{JabRef} e administradas pelo {\large\BibTeX}\ com o estilo \textsf{plainnat}.
+% O texto utiliza fonte \NomeFonte em corpo de 12 pontos.
+% A numeração dos capítulos segue com a familia tipográfica \NomeFonteCap.\\ 
+% \vspace{.5cm}
+% %\includegraphics[width=.5\textwidth]{Eye_of_Horus_bw}
+% \end{center}
+
+\end{document}
